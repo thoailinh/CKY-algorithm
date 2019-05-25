@@ -71,18 +71,18 @@ def display_table(P, T, NT, words):
             if len(c) != 0:
                 cells.append('|'.join(c))
             else:
-                cells.append('....')
+                cells.append('             ')
 
     l = np.array(cells).reshape(d[0],d[0])
 
     #print the table
     for i in range(d[0]):
         for j in range(d[0]):
-            if l[i,j] != '....' :
-                m = str(i)
-                n = str(j+1)
-                s = m+n
-                l[i,j] = l[i,j] +s
+            if len(l[i,j]) < 10 :
+                # m = str(i)
+                # n = str(j+1)
+                s = str(i) + str(j+1)
+                l[i,j] = l[i,j] + '|' + str(i) + ',' + str(j+1)
 
     print '\n0  ' + ''.join([("%-*s" % (15, i)) for i in words])
     for i in range(d[0]):
@@ -101,7 +101,7 @@ def display_table(P, T, NT, words):
 
 
 R, NT, T, Gt, GT, valid = parse_cnf(open("/home/wolf/Downloads/pyCKY-master/G1.txt"))
-string = "nguoi ay thuong hay vuot toc toi"
+string = "mot loai ca moi moi xuathien o bien"
 
 list(string.split(" "))
 cky(R, NT, T, Gt, GT, list(string.split(" ")))

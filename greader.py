@@ -2,10 +2,10 @@
 #### SIMPLE GRAMMAR PARSING
 ###############################################################
 def parse_cnf(file):
-    #lines = [line.strip() for line in file]
-    lines = []
-    for line in file:
-        lines.append(line.strip())
+    lines = [line.strip() for line in file]
+#     lines = []
+#     for line in file:
+#         lines.append(line.strip())
     G = {}
     valid = True
 
@@ -45,10 +45,10 @@ def filter_dict(d, l):
     return r
 
 def parse_rule(line):
-    #rule = [x.strip() for x in line.split("->")]
-    rule = []
-    for x in line.split("->"):
-        rule.append(x.strip())
+    rule = [x.strip() for x in line.split("->")]
+#     rule = []
+#     for x in line.split("->"):
+#         rule.append(x.strip())
     #print line
     if len(rule) != 2:
         print ("Rule no valid: " + line)

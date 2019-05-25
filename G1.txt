@@ -1,10 +1,10 @@
 S
 S -> NP VP
-NP -> NP ADJP | CD NP | UN NN
-VP -> VB NP
+NP -> NN ADJP | NN NP
+VP -> ADVP VP | VB NP
+ADVP -> RB RB
 NP -> toi
-NN -> sach
-VB -> mua
-CD -> mot
-UN -> quyen
-ADJP -> moi
+NN -> nguoi | toc
+ADJP -> ay
+RB -> thuong | hay
+VB -> vuot

@@ -59,7 +59,6 @@ def cky(Roots, NT, T, GT, GNT, words, show_table= True, gettree=False):
 
 def display_table(P, T, NT, words):
     d = P.shape # (5,5,6)
-    print(d)
     ##calculate the padding and the cells content
     cells = []
 
@@ -70,31 +69,39 @@ def display_table(P, T, NT, words):
                 if P[i,j, k] != 0:
                     c.append(NT[k])
             if len(c) != 0:
-                cells.append(','.join(c))
+                cells.append('|'.join(c))
             else:
-                cells.append('                ')
+                cells.append('....')
 
     l = np.array(cells).reshape(d[0],d[0])
 
     #print the table
     for i in range(d[0]):
         for j in range(d[0]):
-            print(l[i,j])
-            if len(l[i,j]) != 10 :
+            if l[i,j] != '....' :
                 m = str(i)
                 n = str(j+1)
                 s = m+n
                 l[i,j] = l[i,j] +s
 
-    print '\n0  ' + ''.join([("%-*s" % (10, i)) for i in words])
+    print '\n0  ' + ''.join([("%-*s" % (15, i)) for i in words])
     for i in range(d[0]):
         print "%d " % (i),
-        print (''.join([("%-*s" % (10, l[i,j])) for j in range(d[0]) ]))
+        print (''.join([("%-*s" % (15, l[i,j])) for j in range(d[0]) ]))
+
+    # padding = max([len(c) for c in cells]) + 2
+
+
+    # ##print the table
+    # print '\n   ' + ' '.join([("%-*s" % (padding, cells[i])) for i in range(0, d[0])])
+    # for i in range(1,d[0]+1):
+    #     print "%d " %(i),
+    #     print ' '.join([("%-*s" % (padding, cells[i])) for i in range(i*d[0], (i+1)*d[0]) ])
 
 
 
 R, NT, T, Gt, GT, valid = parse_cnf(open("/home/wolf/Downloads/pyCKY-master/G1.txt"))
-string = "toi mua mot quyen sach moi"
+string = "nguoi ay thuong hay vuot toc toi"
 
 list(string.split(" "))
 cky(R, NT, T, Gt, GT, list(string.split(" ")))

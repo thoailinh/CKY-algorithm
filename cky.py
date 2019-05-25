@@ -72,7 +72,7 @@ def display_table(P, T, NT, words):
             if len(c) != 0:
                 cells.append(','.join(c))
             else:
-                cells.append('          ')
+                cells.append('                ')
 
     l = np.array(cells).reshape(d[0],d[0])
 
@@ -80,26 +80,16 @@ def display_table(P, T, NT, words):
     for i in range(d[0]):
         for j in range(d[0]):
             print(l[i,j])
-            if len(l[i,j]) != 5 :
+            if len(l[i,j]) != 10 :
                 m = str(i)
                 n = str(j+1)
                 s = m+n
                 l[i,j] = l[i,j] +s
-    print l
 
     print '\n0  ' + ''.join([("%-*s" % (10, i)) for i in words])
     for i in range(d[0]):
         print "%d " % (i),
         print (''.join([("%-*s" % (10, l[i,j])) for j in range(d[0]) ]))
-
-    # padding = max([len(c) for c in cells]) + 2
-
-
-    # ##print the table
-    # print '\n   ' + ' '.join([("%-*s" % (padding, cells[i])) for i in range(0, d[0])])
-    # for i in range(1,d[0]+1):
-    #     print "%d " %(i),
-    #     print ' '.join([("%-*s" % (padding, cells[i])) for i in range(i*d[0], (i+1)*d[0]) ])
 
 
 

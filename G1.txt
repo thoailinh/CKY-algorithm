@@ -1,0 +1,10 @@
+S
+S -> NP VP
+NP -> NP ADJP | CD NP | UN NN
+VP -> VB NP
+NP -> toi
+NN -> sach
+VB -> mua
+CD -> mot
+UN -> quyen
+ADJP -> moi

@@ -72,7 +72,7 @@ def display_table(P, T, NT, words):
                 s = str(i) + str(j+1)
                 l[i,j] = l[i,j] + '|' + str(i) + ',' + str(j+1)
 
-    print(('\n0  ' + ''.join([("%-*s" % (16, i)) for i in words])))
+    print(('\n0  ' + ''.join([("%-*s" % (15, i)) for i in words])))
     for i in range(d[0]):
         print(("%d " % (i)), end=' ')
         print((''.join([("%-*s" % (15, l[i,j])) for j in range(d[0]) ])))

@@ -1,2 +1,3 @@
 # CKY-algorithm
-# PYTHON 2
+# PYTHON 3
+# print table

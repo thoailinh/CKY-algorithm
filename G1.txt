@@ -1,13 +1,9 @@
 S
 S -> NP VP
-NP -> CD NP
-NP -> NP ADJP | UN NP
-NP -> ca | bien
-VP -> ADVP VP | VB PP
+NP -> DT NP
+NP -> Nam | bạn | trường
+VP -> VP PP | VB NP
 PP -> IN NP
-VB -> xuathien
-ADVP -> moi
-CD -> mot
-UN -> loai
-ADJP -> moi
-IN -> o
+VB -> có
+DT -> nhiều
+IN -> ở

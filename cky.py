@@ -150,7 +150,7 @@ def create_tree(t, bp, pid, nid):
         nid = create_tree(t, bp.pointers[1], pid, nid+1)
 
     return nid
-R, NT, T, Gt, GT, valid = parse_cnf(open("/home/wolf/Downloads/pyCKY-master/G1.txt"))
+R, NT, T, Gt, GT, valid = parse_cnf(open("G1.txt"))
 string = "lá thu kêu xào xạc"
 
 list(string.split(" "))

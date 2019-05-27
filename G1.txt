@@ -1,9 +1,8 @@
 S
 S -> NP VP
-NP -> DT NP
-NP -> Nam | bạn | trường
-VP -> VP PP | VB NP
-PP -> IN NP
-VB -> có
-DT -> nhiều
-IN -> ở
+NP -> NN NN
+VP -> VB ADVP
+ADVP -> ADVP ADVP
+NN -> lá | thu
+VB -> kêu
+ADVP -> xào | xạc
